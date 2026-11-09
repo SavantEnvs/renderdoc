@@ -1,0 +1,9 @@
+project: savantenvs/renderdoc
+target: fuzz_rdc
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_rdc/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_rdc
+    libfuzzer: true
+    timeout: 30
